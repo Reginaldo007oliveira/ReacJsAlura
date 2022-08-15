@@ -1,11 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Banner from './componentes/Banner/Banner';
+import Banner from './componentes/Banner';
+
+import CampoTexto from './componentes/CampoTexto/';
 
 function App() {
   return (
   
     <div className="App">
+      <CampoTexto />
       <Banner />
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
