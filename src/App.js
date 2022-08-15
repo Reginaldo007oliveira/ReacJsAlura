@@ -1,15 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Banner from './componentes/Banner/Banner';
 
 function App() {
   return (
+  
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Banner />
+      {/* <header className="App-header"> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-         Opa <code>src/App.js</code> and save to reload.
+        Dev Reginaldo Oliveira
         </p>
-        <p> Componentes</p>
+      
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,7 +21,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      {/* </header> */}
     </div>
   );
 }
