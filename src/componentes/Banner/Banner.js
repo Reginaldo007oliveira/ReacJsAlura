@@ -1,10 +1,9 @@
-import React from 'react';
-
-// import { Container } from './styles';
-
 function Banner() {
-  return(
-    <h1>Bora bora</h1>
-  )
+     return(
+        <div>
+        <img src="./imagens/banner.png" alt="teste" />
+        </div>
+     )
+  }
 
-export default Banner;
+   export default  Banner
