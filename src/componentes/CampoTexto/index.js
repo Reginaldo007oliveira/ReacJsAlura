@@ -1,9 +1,13 @@
+import './CampoTexto.css'
 
-const CampoTexto = () => {
+const CampoTexto = (props) => {
+     // o placeholder pode ser podificado usando o template string
+    const placeholderModificado = `${props.placeholder}...` 
+    console.log(props.label)
     return (
-        <div>
-            <label> Nome</label>
-            <input />
+        <div className="campo-texto">
+            <label>{props.label}</label>
+            <input placeholder={placeholderModificado} />
         </div>
     );
 };
