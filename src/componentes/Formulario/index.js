@@ -12,13 +12,19 @@ const Formulario = () => {
         'Mobile',
         'Inovação e gestão'
     ]
+    
+    const aoEnviar = (evento) => {
+        evento.preventDefault()
+        console.log('Form enviado')
+    }
+    
   return (
     <section className="formulario">
-      <form>
-        <CampoTexto label="Nome" placeholder="Digite o seu nome" />
-        <CampoTexto label="Cargo" placeholder="Digite o seu cargo" />
-        <CampoTexto label="Imagem" placeholder="carregue uma i" />
-        <ListaSuspensa label="Time" itens={time}/>
+      <form onSubmit={aoEnviar}>
+        <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite o seu nome" />
+        <CampoTexto obrigatorio={true} label="Cargo" placeholder="Digite o seu cargo" />
+        <CampoTexto obrigatorio={false}  label="Imagem" placeholder="carregue uma i" />
+        <ListaSuspensa required={true} label="Time" itens={time}/>
         {/* <Botao texto="Criar Card" /> */}
         <Botao>
             criar card
