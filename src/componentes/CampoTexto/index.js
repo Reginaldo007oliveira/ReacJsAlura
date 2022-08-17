@@ -1,29 +1,21 @@
 import './CampoTexto.css'
-import {useState} from 'react';
+
 const CampoTexto = (props) => {
-     // Outra forma de escrever o código com o template string
-    console.log(props.label)
 
-    const [valor,setValor] = useState('');
+    const placeholderModificada = `${props.placeholder}...` 
 
-  
-
-    const aoDigitar = (evento) => {
-        //  console.log(evento.target.value)
-        setValor(evento.target.value)
-        console.log(valor)
+    const aoDigitado = (evento) => {
+        props.aoAlterado(evento.target.value)
     }
-   
+
     return (
         <div className="campo-texto">
-            <label>{props.label}</label>
-            <input value={valor} onChange={aoDigitar} required={props.obrigatorio} placeholder={  `${props.placeholder}...` } />
+            <label>
+                {props.label}
+            </label>
+            <input value={props.valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={placeholderModificada}/>
         </div>
-    );
-};
+    )
+}
 
-
-
-
-
-export default CampoTexto;
+export default CampoTexto
